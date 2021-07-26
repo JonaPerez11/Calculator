@@ -49,7 +49,7 @@ def mult(num1, num2):
 def div(num1, num2):
     return num1/num2
 
-def main():
+if __name__ == '__main__':
     print("Please press the number for the operation you would like to perform: ")
     print("1 - Addition")
     print("2 - Subtraction")
@@ -59,5 +59,3 @@ def main():
     num1 = int(input("Enter the first number: "))
     num2 = int(input("Enter the second number: "))
     print(switch_op(choice,num1,num2))
-    
-main()

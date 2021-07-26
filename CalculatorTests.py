@@ -27,3 +27,20 @@
 #CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 #OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+from Calculator import switch_op
+import unittest
+
+class CalculatorTests(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(switch_op(1,2,3), 5, "should be 5")
+    def test_sub(self):
+        self.assertEqual(switch_op(2,3,1), 2, "should be 2")
+    def test_mult(self):
+        self.assertEqual(switch_op(3,2,3), 6, "should be 6")
+    def test_div(self):
+        self.assertEqual(switch_op(4,4,2), 2, "should be 2")
+
+if __name__ == '__main__':
+    unittest.main()
